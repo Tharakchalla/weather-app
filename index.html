@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>weatherforecast</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body onload="DefaultScreen()">
+    <div align="center" id="headsearch">
+        <h1 id="Para1">7 Days Weather Forecast</h1>
+        <p id="inputContainer">City: <input type="text" id="cityInput"></p>
+        <button type="button" onclick="GetInfo()">Search</button>        
+        <h2 id="cityName">---Delhi---</h2>
+    </div>
+    <div class="currentdatetime">
+        <script>
+            var currentdate = new Date();
+            var datetime = "CurrentDate:"+currentdate.getDay()+"-"+currentdate.getMonth()+"-"+ currentdate.getFullYear()+" Time:"+currentdate.getHours()+":"+currentdate.getMinutes()+":"+currentdate.getSeconds();
+            document.write(datetime)
+        </script>
+    </div>
+   
+    <div id = "weatherContainer">
+        <div id="iconsContainer">    
+            <div class = "icons">
+                <p class="weather" id="day1"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                <p class="minValues" id="day1Min">Loading...</p><br>
+                <p class="maxValues" id="day1Max">Loading...</p><br>
+                <p class="humidity" id="day1hum">Loading...</p><br>
+                <p class="speed" id="day1speed">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day2"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img2"></div>
+                <p class="minValues" id="day2Min">Loading...</p><br>
+                <p class="maxValues" id="day2Max">Loading...</p><br>
+                <p class="humidity" id="day2hum">Loading...</p><br>
+                <p class="speed" id="day2speed">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day3"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img3"></div>
+                <p class="minValues" id="day3Min">Loading...</p><br>
+                <p class="maxValues" id="day3Max">Loading...</p><br>
+                <p class="humidity" id="day3hum">Loading...</p><br>
+                <p class="speed" id="day3speed">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day4"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img4"></div>
+                <p class="minValues" id="day4Min">Loading...</p><br>
+                <p class="maxValues" id="day4Max">Loading...</p><br>
+                <p class="humidity" id="day4hum">Loading...</p><br>
+                <p class="speed" id="day4speed">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day5"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img5"></div>
+                <p class="minValues" id="day5Min">Loading...</p><br>
+                <p class="maxValues" id="day5Max">Loading...</p><br>
+                <p class="humidity" id="day5hum">Loading...</p><br>
+                <p class="speed" id="day5speed">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day6"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img6"></div>
+                <p class="minValues" id="day6Min">Loading...</p><br>
+                <p class="maxValues" id="day6Max">Loading...</p><br>
+                <p class="humidity" id="day6hum">Loading...</p><br>
+                <p class="speed" id="day6speed">Loading...</p>
+
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day7"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img7"></div>
+                <p class="minValues" id="day7Min">Loading...</p><br>
+                <p class="maxValues" id="day7Max">Loading...</p><br>
+                <p class="humidity" id="day7hum">Loading...</p><br>
+                <p class="speed" id="day7speed">Loading...</p>
+
+            </div>
+        </div>
+    </div>
+    <div align="center" id="chart">
+        <h1>Chart indicating the weatherforecast:</h1>
+        <p>Red for Maximum Temperature(°C)<br>Green for Minimun Temperature(°C)<br>Blue for Humidity(%)<br>White for Wind Speed(miles/hour)</p>
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+        
+</body>
+</html>
